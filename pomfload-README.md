@@ -1,9 +1,11 @@
 pomfload - upload to pomf from the comfort of your command line
 ----
 
-```usage: pomfload FILE [FILE [FILE...]]
+```
+usage: pomfload FILE [FILE [FILE...]]
 
-what are you, stupid?```
+what are you, stupid?
+```
 
 requirements
 ---
