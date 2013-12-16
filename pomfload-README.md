@@ -10,6 +10,7 @@ what are you, stupid?
 requirements
 ---
 * bourne-compatible shell
+* [curl](http://curl.haxx.se/)
 * [jq](http://stedolan.github.io/jq/)
 
 license
