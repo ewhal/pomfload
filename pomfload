@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ $# -lt 1 ]; then
+        echo "Usage: `basename $0` FILE [FILE...]"
+        exit 1
+fi
+
+for f in "$@"; do
+    d=$(curl -sS --progress-bar -F files=@"$f" http://pomf.se/upload.php | jq -c -r '.files[0].url')
+
+    if [ $# -gt 1 ]; then
+        # Apparently some builtin echos haet -n.
+        /bin/echo -n "$f: "
+    fi
+    echo "http://a.pomf.se/$d"
+done
