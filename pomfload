@@ -6,7 +6,7 @@ if [ $# -lt 1 ]; then
 fi
 
 for f in "$@"; do
-    d=$(curl -sS -F "files=@$f" http://pomf.se/upload.php | jq -c -r '.files[0].url')
+    d=$(curl -sS -F "files[]=@$f" http://pomf.se/upload.php | jq -c -r '.files[0].url')
 
     if [ $# -gt 1 ]; then
         # Apparently some builtin echos haet -n.
