@@ -13,4 +13,4 @@ for f ; do
     set -- "$@" -F "files[]=@$f"
 done
 
-curl -fsSL "$@" "$uppomf" | jq -c -r '"'"$downpomf"'" + .files[].url'
+curl -fsSL "$@" "$uppomf" | jq -c -r --arg base "$downpomf" '$base + .files[].url'
