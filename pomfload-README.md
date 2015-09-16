@@ -9,7 +9,7 @@ what are you, stupid?
 
 requirements
 ---
-* bourne-compatible shell
+* POSIX-compatible shell
 * [curl](http://curl.haxx.se/)
 * [jq](http://stedolan.github.io/jq/)
 
