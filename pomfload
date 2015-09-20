@@ -1,5 +1,4 @@
 #!/bin/sh
-downpomf="https://i.pantsu.cat/"
 uppomf="https://pantsu.cat/upload.php"
 
 if test $# -lt 1 ; then
@@ -13,4 +12,4 @@ for f ; do
     set -- "$@" -F "files[]=@$f"
 done
 
-curl -fsSL "$@" "$uppomf" | jq -c -r --arg base "$downpomf" '$base + .files[].url'
+curl -fsSL "$@" "$uppomf" | jq -c -r ".files[].url"
