@@ -1,6 +1,6 @@
 #!/bin/sh
-downpomf="https://a.pomf.cat/"
-uppomf="https://pomf.cat/upload.php"
+downpomf="https://i.pantsu.cat/"
+uppomf="https://pantsu.cat/upload.php"
 
 if test $# -lt 1 ; then
     echo "Usage: $(basename "$0") FILE [FILE...]"
